@@ -1,2 +1,2 @@
-# c-source-codes
-Source code of C-programs
+# C Source Codes
+This project contains source code of multiple c programms.
