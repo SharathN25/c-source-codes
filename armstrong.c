@@ -12,5 +12,5 @@ void main(){
     if(sum==temp)
       printf("%d is amstrong number",temp);
       else
-      printf("%d is not amstrong number",temp);
+      printf("%d is not amstrong anumber",temp);
 }

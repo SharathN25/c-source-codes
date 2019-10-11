@@ -14,7 +14,7 @@ void main()
     int n,item;
     while(1)
     {
-    printf("1.Push\n2.Pop\n3.Peek\n4.Traverse\n5.Exit\n");
+    printf("\n1.Push\n2.Pop\n3.Peek\n4.Traverse\n5.Exit\n");
     printf("Enter Your Choice\n");
     scanf("%d",&n);
     switch (n)
