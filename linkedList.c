@@ -14,6 +14,7 @@ void addAtAfter(void);
 void delete(void);
 void swap(void);
 void reverse(void);
+void sort(void);
 struct node *root = NULL;
 int len;
 
@@ -23,7 +24,7 @@ void main()
     while(1)
     {
         printf("Linked list operations\n");
-        printf("1.Append\n2.Add at Begin\n3.Add at After\n4.Length\n5.Display\n6.Delete\n7.Swap\n8.Reverse List\n9.Exit\n");
+        printf("1.Append\n2.Add at Begin\n3.Add at After\n4.Length\n5.Display\n6.Delete\n7.Swap\n8.Reverse List\n9.Sort\n10.Exit\n");
         printf("Enter your choice\n");
         scanf("%d",&n);
         switch (n)
@@ -44,8 +45,10 @@ void main()
         case 7: swap();
                 break;
         case 8: reverse();
-                break;        
-        case 9: exit(1);                                      
+                break;  
+        case 9: sort();
+                break;      
+        case 10: exit(1);                                    
         
         default: printf("Invalid Choice\n");
                  break;
@@ -261,8 +264,35 @@ void reverse()
  display();
 }
 
-    
 
+void sort(void)
+{
+    if(root == NULL)
+    {
+        printf("List is Emty\n");
+    }
+    else
+    {
+        struct node *p = root, *q = NULL;
+        int swapped = 1;
 
+        while(swapped)
+        {
+            p = root;
+            swapped = 0;
+            while (p->link != q)
+            {
+                if(p->data > p->link->data)
+                {
+                    int temp = p->data;
+                    p->data = p->link->data;
+                    p->link->data = temp;
+                    swapped = 1;
+                }
+                p = p->link;
+            }
+            q = p;
+        }
 
-
+    }
+}
